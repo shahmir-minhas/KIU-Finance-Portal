@@ -17,3 +17,31 @@ use Inertia\Inertia;
 Route::get('login', function () {
     return Inertia::render('Auth/Login');
 });
+
+Route:: get("/", function () {
+    return Inertia::render('Dashboard/Index');
+});
+
+Route:: get("/dashboard", function () {
+    return Inertia::render('Dashboard/Index');
+});
+Route:: get("/financial-payments", function () {
+    return Inertia::render('FinancialPayments/Index');
+});
+
+Route:: get("/expenses", function () {
+    return Inertia::render('Expenses/Index');
+});
+
+Route:: get("/student-wallets", function () {
+    return Inertia::render('StudentWallets/Index');
+});
+
+Route:: get("/employees", function () {
+    return Inertia::render('Employees/Index');
+});
+
+Route:: get("/payment-account", function () {
+    return Inertia::render('PaymentAccount/Index');
+});
+

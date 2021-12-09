@@ -1,0 +1,84 @@
+.primary-sidebar {
+    width: 225px;
+    height: 100vh;
+    background: transparent linear-gradient(169deg, #343379 0%, #089752 100%) 0%
+        0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #0000002b;
+    border-radius: 0px 20px 20px 0px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    .logo-container {
+        height: 121px;
+        width: 100%;
+        background-color: white;
+        border-top-right-radius: 20px;
+        opacity: 1;
+        padding: 15px 60px;
+    }
+
+    ul {
+        padding: 20px 16px;
+        li {
+            list-style-type: none;
+            width: 212px;
+            height: 30px;
+            color: white;
+            padding: 3px 13px;
+            margin-bottom: 20px;
+            text-align: left;
+            span {
+                width: 27px;
+                display: inline-block;
+            }
+            img {
+                margin-bottom: 3px;
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+        li.active {
+            background: transparent
+                linear-gradient(289deg, #2d2ba8 0%, #089752 100%) 0% 0%
+                no-repeat padding-box;
+            box-shadow: 0px 0px 20px #0000002b;
+            border-radius: 4px 0px 0px 4px;
+        }
+    }
+}
+
+.top-navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 22px 26px 22px calc(225px + 24px);
+    width: 100%;
+    z-index: 1;
+    background-color: #f8f8f8;
+    transition: all ease-in 100ms;
+    margin-left: 24px;
+
+    .avatar {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+
+        @include BGImageCenterCover();
+    }
+}
+.scroll-active {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 3px 0px 15px #85858529;
+}
+
+main {
+    margin-left: 225px;
+    margin-top: 100px;
+    padding: 0 24px;
+    background: #f8f8f8;
+}
