@@ -53565,6 +53565,14 @@ var map = {
 		"./resources/js/Pages/Expenses/Index.jsx",
 		"resources_js_Pages_Expenses_Index_jsx"
 	],
+	"./FinancialPayments/Details": [
+		"./resources/js/Pages/FinancialPayments/Details.jsx",
+		"resources_js_Pages_FinancialPayments_Details_jsx"
+	],
+	"./FinancialPayments/Details.jsx": [
+		"./resources/js/Pages/FinancialPayments/Details.jsx",
+		"resources_js_Pages_FinancialPayments_Details_jsx"
+	],
 	"./FinancialPayments/Index": [
 		"./resources/js/Pages/FinancialPayments/Index.jsx",
 		"resources_js_Pages_FinancialPayments_Index_jsx"
@@ -53738,7 +53746,7 @@ module.exports = JSON.parse('{"_from":"axios@^0.21.1","_id":"axios@0.21.4","_inB
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Auth_Login_jsx":1,"resources_js_Pages_Dashboard_Index_jsx":1,"resources_js_Pages_Employees_Index_jsx":1,"resources_js_Pages_Expenses_Index_jsx":1,"resources_js_Pages_FinancialPayments_Index_jsx":1,"resources_js_Pages_PaymentAccount_Index_jsx":1,"resources_js_Pages_StudentWallets_Index_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Auth_Login_jsx":1,"resources_js_Pages_Dashboard_Index_jsx":1,"resources_js_Pages_Employees_Index_jsx":1,"resources_js_Pages_Expenses_Index_jsx":1,"resources_js_Pages_FinancialPayments_Details_jsx":1,"resources_js_Pages_FinancialPayments_Index_jsx":1,"resources_js_Pages_PaymentAccount_Index_jsx":1,"resources_js_Pages_StudentWallets_Index_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

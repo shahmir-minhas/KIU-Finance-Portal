@@ -4,6 +4,7 @@
 
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
+
 //Antd
 @import "~antd/dist/antd.css";
 
@@ -20,6 +21,7 @@
 
 // // PAGES
 @import "Pages/dashboard";
+@import "Pages/financial-payments";
 
 // // responsivness
 @import "responsive";

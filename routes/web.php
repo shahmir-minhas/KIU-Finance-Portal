@@ -28,6 +28,9 @@ Route:: get("/dashboard", function () {
 Route:: get("/financial-payments", function () {
     return Inertia::render('FinancialPayments/Index');
 });
+Route:: get("/financial-payments/{id}", function () {
+    return Inertia::render('FinancialPayments/Details');
+});
 
 Route:: get("/expenses", function () {
     return Inertia::render('Expenses/Index');

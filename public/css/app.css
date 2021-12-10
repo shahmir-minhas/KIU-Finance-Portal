@@ -38556,6 +38556,9 @@ main {
   width: max-content;
 }
 
+.dashboard-wrapper {
+  padding-bottom: 50px;
+}
 .dashboard-wrapper .green-circle {
   width: 8px;
   height: 8px;
@@ -38575,6 +38578,7 @@ main {
 }
 .dashboard-wrapper .finance-card {
   padding: 11px 21px;
+  height: 154px;
 }
 .dashboard-wrapper .finance-card p {
   margin: 2 0;
@@ -38633,6 +38637,10 @@ main {
 }
 .dashboard-wrapper .cashflow-chart-card {
   padding: 27px 27px 54px 30px;
+  height: 504px;
+}
+.dashboard-wrapper .revenue-bar-chart-wrapper {
+  height: 565px;
 }
 .dashboard-wrapper .revenue-bar-chart-wrapper .primary-card-rounded {
   padding: 27px 27px 27px 30px;
@@ -38645,6 +38653,87 @@ main {
 .dashboard-wrapper .recharts-default-legend .recharts-legend-item .recharts-legend-item-text {
   font-size: 12px;
   margin-left: 14px;
+}
+
+.financial-payments-wrapper .primary-table-header {
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+.financial-payments-wrapper .btn-approve {
+  width: 84px;
+  height: 31px;
+  padding: 0;
+  color: #089752;
+  border: 1px solid #089752;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.financial-payments-wrapper .btn-rejected {
+  width: 84px;
+  height: 31px;
+  padding: 0;
+  color: #cc0000;
+  border: 1px solid #cc0000;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.financial-details-wrapper a {
+  color: #2f2f75 !important;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.financial-details-wrapper .primary-card-rounded {
+  padding: 30px 70px 40px 30px;
+}
+.financial-details-wrapper .img-holder {
+  background-color: grey;
+  width: 188px;
+  height: 158px;
+}
+.financial-details-wrapper .details-cell p {
+  color: #b8b8b8;
+  font-size: 12px;
+  margin: 0;
+  margin-bottom: 6px;
+}
+.financial-details-wrapper .details-cell h6, .financial-details-wrapper .details-cell .h6 {
+  color: #15152e;
+  font-size: 16px;
+  margin: 0;
+}
+
+.text-area-dropdown {
+  width: 206px;
+  height: 78px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.btn-dropdown-cancel {
+  padding: 0;
+  width: 46px;
+  height: 18px;
+  border: 1px solid #2f2f75;
+  color: #2f2f75;
+  border-radius: 4px;
+  opacity: 1;
+  margin: 1px 5px;
+  font-size: 10px;
+}
+
+.btn-dropdown-save {
+  padding: 0;
+  width: 46px;
+  height: 18px;
+  border: 1px solid #089752;
+  color: #089752;
+  border-radius: 4px;
+  opacity: 1;
+  margin: 1px 5px;
+  font-size: 10px;
 }
 
 

@@ -1,4 +1,5 @@
 .dashboard-wrapper {
+    padding-bottom: 50px;
     .green-circle {
         width: 8px;
         height: 8px;
@@ -18,6 +19,7 @@
     }
     .finance-card {
         padding: 11px 21px;
+        height: 154px;
         p {
             margin: 2 0;
             color: #0c0c0c;
@@ -54,6 +56,7 @@
         }
     }
     .sponsors-card {
+        // height: 236px;
         hr {
             margin: 0;
         }
@@ -74,12 +77,15 @@
         }
     }
     .funds-utilization-card {
+        // height: 308px;
         padding: 11px 21px;
     }
     .cashflow-chart-card {
         padding: 27px 27px 54px 30px;
+        height: 504px;
     }
     .revenue-bar-chart-wrapper {
+        height: 565px;
         .primary-card-rounded {
             padding: 27px 27px 27px 30px;
             height: 528px !important;

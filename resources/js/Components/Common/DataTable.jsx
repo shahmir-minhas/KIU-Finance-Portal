@@ -19,23 +19,24 @@ const DataTable = ({
             style: {
                 color: "#686874",
                 fontSize: "12px",
+                // justifyContent: "center",
 
                 "&:last-child": {
                     display: "flex",
-                    justifyContent: "end",
+                    justifyContent: "center",
                 },
             },
         },
 
         cells: {
             style: {
-                fontSize: "14px",
+                fontSize: "12px",
                 "&:first-child": {
                     textAlign: "center",
                 },
                 "&:last-child": {
                     display: "flex",
-                    justifyContent: "end",
+                    justifyContent: "center",
                 },
             },
         },

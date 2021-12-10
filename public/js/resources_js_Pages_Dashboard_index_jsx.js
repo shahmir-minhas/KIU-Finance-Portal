@@ -3838,7 +3838,7 @@ var FundPieChart = function FundPieChart() {
     value: 75
   }, {
     name: "Advertisment",
-    value: 30
+    value: 60
   }, {
     name: "Others",
     value: 50

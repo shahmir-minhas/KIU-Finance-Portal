@@ -112,7 +112,6 @@ const Index = () => {
 
                     <div className="col-8">
                         <AmountGraph />
-
                         <RevenueBarChart />
                     </div>
                 </div>

@@ -5,7 +5,7 @@ const FundPieChart = () => {
     const data = [
         { name: "Salaries", value: 100 },
         { name: "Examination", value: 75},
-        { name: "Advertisment", value: 30 },
+        { name: "Advertisment", value: 60 },
         { name: "Others", value: 50},
     ];
 
