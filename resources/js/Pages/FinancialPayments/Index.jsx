@@ -123,7 +123,7 @@ const Index = () => {
                         >
                             <div className="primary-table-header border mt-4">
                                 <div className="d-flex align-items-center">
-                                    <h2 className="f-16 fw-500 mb-0">
+                                    <h2 className="f-14 fw-500 mb-0">
                                         Showing enrolled students :
                                         <span className="mx-1">16</span>
                                     </h2>

@@ -1,0 +1,21 @@
+.payment-account-wrapper {
+    .btn-active {
+        border: 1px solid var(--unnamed-color-089752);
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #089752;
+        color: #089752;
+        border-radius: 4px;
+        opacity: 1;
+        width: 79px;
+        height: 31px;
+    }
+    .btn-rejected {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #ff4e4e;
+        color: #ff4e4e;
+        border-radius: 4px;
+        opacity: 1;
+        width: 84px;
+        height: 31px;
+    }
+}

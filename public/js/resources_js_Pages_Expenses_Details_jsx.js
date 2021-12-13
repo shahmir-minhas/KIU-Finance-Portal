@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Expenses_Index_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Expenses_Details_jsx"],{
 
 /***/ "./node_modules/@ant-design/colors/dist/index.esm.js":
 /*!***********************************************************!*\
@@ -9334,10 +9334,10 @@ DataTable.propTypes = {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Expenses/Index.jsx":
-/*!***********************************************!*\
-  !*** ./resources/js/Pages/Expenses/Index.jsx ***!
-  \***********************************************/
+/***/ "./resources/js/Pages/Expenses/Details.jsx":
+/*!*************************************************!*\
+  !*** ./resources/js/Pages/Expenses/Details.jsx ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9347,13 +9347,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
 /* harmony import */ var _layout_Index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../layout/Index */ "./resources/js/layout/Index.jsx");
 /* harmony import */ var _Components_Common_DataTable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Components/Common/DataTable */ "./resources/js/Components/Common/DataTable.jsx");
 /* harmony import */ var _Components_Common_Antd_FormInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../Components/Common/Antd/FormInput */ "./resources/js/Components/Common/Antd/FormInput.jsx");
-/* harmony import */ var _Assets_icons_Icon_material_add_circle_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Assets/icons/Icon material-add-circle.svg */ "./resources/js/Assets/icons/Icon material-add-circle.svg");
-/* harmony import */ var _Assets_icons_Icon_material_edit_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Assets/icons/Icon material-edit.svg */ "./resources/js/Assets/icons/Icon material-edit.svg");
-/* harmony import */ var _Assets_icons_Group_229_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Assets/icons/Group 229.svg */ "./resources/js/Assets/icons/Group 229.svg");
+/* harmony import */ var _Assets_icons_Icon_material_remove_red_eye_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Assets/icons/Icon material-remove-red-eye.svg */ "./resources/js/Assets/icons/Icon material-remove-red-eye.svg");
+/* harmony import */ var _Assets_icons_Icon_material_arrow_back_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Assets/icons/Icon material-arrow_back.svg */ "./resources/js/Assets/icons/Icon material-arrow_back.svg");
 
 
 
@@ -9362,21 +9360,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-var Index = function Index() {
+var Details = function Details() {
   var data = [{
     id: 0,
-    totalExpenses: "$30213",
-    category: "Inventory"
-  }, {
-    id: 1,
-    totalExpenses: "$4322",
-    category: "Inventory"
-  }, {
-    id: 2,
-    totalExpenses: "$7621",
-    category: "Inventory"
+    paymentMethod: "Bank Transfer",
+    date: "10-jan-2021"
   }];
   var columns = [{
     name: "S.no",
@@ -9384,37 +9372,44 @@ var Index = function Index() {
       return index + 1;
     }
   }, {
-    name: "Category",
+    name: "Expense ID",
     selector: function selector(row) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        className: "btn-category"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
-        href: "expenses/".concat(row.id)
-      }, row.category));
+      return row.id;
     }
   }, {
-    name: "Total Expenses",
+    name: "Payment Method",
     selector: function selector(row) {
-      return row.totalExpenses;
+      return row.paymentMethod;
+    }
+  }, {
+    name: "Date",
+    selector: function selector(row) {
+      return row.date;
     }
   }, {
     name: "Action",
     selector: function selector(row) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: _Assets_icons_Icon_material_edit_svg__WEBPACK_IMPORTED_MODULE_6__["default"],
-        alt: ""
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
+        href: "/expenses/payment-recipt/".concat(row.id)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: _Assets_icons_Icon_material_remove_red_eye_svg__WEBPACK_IMPORTED_MODULE_5__["default"]
       }));
     }
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_layout_Index__WEBPACK_IMPORTED_MODULE_2__["default"], {
     currentPage: 2
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "expenses-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "d-flex justify-content-start align-items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", {
-    className: "fw-bold f-18 m-0"
-  }, "Expenses")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "expenses-details-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
+    href: "/expenses",
+    className: "d-flex"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: _Assets_icons_Icon_material_arrow_back_svg__WEBPACK_IMPORTED_MODULE_6__["default"],
+    alt: "",
+    className: "me-1"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", {
+    className: "f-18 m-0"
+  }, "Inventory")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "border border-top-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Common_DataTable__WEBPACK_IMPORTED_MODULE_3__["default"], {
     columns: columns,
@@ -9426,27 +9421,15 @@ var Index = function Index() {
     className: "primary-table-header border mt-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     className: "f-14 fw-500 mb-0"
-  }, "Showing all Expenses Category :", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  }, "Showing all Inventory Expenses:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "mx-1"
-  }, "16")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "d-flex align-items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
-    href: "#",
-    className: "create-category"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "me-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: _Assets_icons_Icon_material_add_circle_svg__WEBPACK_IMPORTED_MODULE_5__["default"],
-    alt: ""
-  })), "Create new Category"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    className: "btn-add"
-  }, "Add Expense"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Common_Antd_FormInput__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "16")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Common_Antd_FormInput__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "mb-0",
     type: "search"
-  }))))))));
+  })))))));
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Details);
 
 /***/ }),
 
@@ -11147,24 +11130,9 @@ function alignPoint(el, tgtPoint, align) {
 
 /***/ }),
 
-/***/ "./resources/js/Assets/icons/Group 229.svg":
-/*!*************************************************!*\
-  !*** ./resources/js/Assets/icons/Group 229.svg ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Group 229.svg?87516c499fb1b9bb5c593205799b6d45");
-
-/***/ }),
-
-/***/ "./resources/js/Assets/icons/Icon material-add-circle.svg":
+/***/ "./resources/js/Assets/icons/Icon material-arrow_back.svg":
 /*!****************************************************************!*\
-  !*** ./resources/js/Assets/icons/Icon material-add-circle.svg ***!
+  !*** ./resources/js/Assets/icons/Icon material-arrow_back.svg ***!
   \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -11173,14 +11141,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Icon material-add-circle.svg?022eeb62e4f9c23a63d9390f2679b870");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Icon material-arrow_back.svg?64704b6c6e838deffeeec2795072b2bf");
 
 /***/ }),
 
-/***/ "./resources/js/Assets/icons/Icon material-edit.svg":
-/*!**********************************************************!*\
-  !*** ./resources/js/Assets/icons/Icon material-edit.svg ***!
-  \**********************************************************/
+/***/ "./resources/js/Assets/icons/Icon material-remove-red-eye.svg":
+/*!********************************************************************!*\
+  !*** ./resources/js/Assets/icons/Icon material-remove-red-eye.svg ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -11188,7 +11156,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Icon material-edit.svg?a74848b9bcc2158ac0a991434d809d3d");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Icon material-remove-red-eye.svg?af4b557c7723d47c12b6e05a15d00036");
 
 /***/ }),
 

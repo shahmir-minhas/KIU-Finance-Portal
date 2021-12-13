@@ -35,6 +35,12 @@ Route:: get("/financial-payments/{id}", function () {
 Route:: get("/expenses", function () {
     return Inertia::render('Expenses/Index');
 });
+Route:: get("/expenses/{id}", function () {
+    return Inertia::render('Expenses/Details');
+});
+Route:: get("/expenses/payment-recipt/{id}", function () {
+    return Inertia::render('Expenses/PaymentRecipt');
+});
 
 Route:: get("/student-wallets", function () {
     return Inertia::render('StudentWallets/Index');
