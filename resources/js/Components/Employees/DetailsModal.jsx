@@ -3,7 +3,6 @@ import { Modal } from "antd";
 import ExportDropdown from "../Common/ExportDropdown";
 
 const DetailsModal = ({ id }) => {
-    console.log(id);
     const [isModalVisible, setIsModalVisible] = React.useState(false);
     //Modal Handle
     const showModal = () => {
@@ -92,7 +91,7 @@ const DetailsModal = ({ id }) => {
                     <ExportDropdown />
                 </div>
             </Modal>
-            <span className="text-decoration-underline" onClick={showModal}>
+            <span className="text-decoration-underline id-color" onClick={showModal}>
                 {id}
             </span>
         </React.Fragment>

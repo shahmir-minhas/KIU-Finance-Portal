@@ -12,7 +12,8 @@ import {
 import { Select } from "antd";
 const { Option } = Select;
 
-const AmountGraph = () => {
+const CashFlowGraph = () => {
+    // temporary data array
     const data = [
         {
             name: "Page A",
@@ -62,14 +63,16 @@ const AmountGraph = () => {
             <div className="d-flex justify-content-between align-items-center mb-3">
                 <h6 className="f-14 fw-600 m-0">Cash Inflow / Outflow</h6>
                 <div className="d-flex justify-content-between align-items-center">
-                    <p className="m-0 f-14 me-2">Last:</p>
-                    <Select defaultValue="8 Years">
+                    <p className="m-0 f-14 me-2 text-dark">Last:</p>
+                    <Select defaultValue="8 Years" className="select-secondary">
                         <Option value="7">7 Years</Option>
                         <Option value="5">5 Years</Option>
                     </Select>
                 </div>
             </div>
-
+            {/* 
+                    //Pie Chart 
+            */}
             <div style={{ width: "100%", height: 300 }}>
                 <ResponsiveContainer>
                     <LineChart
@@ -123,6 +126,7 @@ const AmountGraph = () => {
                         />
                     </LineChart>
                 </ResponsiveContainer>
+                
                 <div className="d-flex justify-content-center pt-2">
                     <div className="d-flex align-items-center">
                         <div className="green-circle rounded-circle"></div>
@@ -142,4 +146,4 @@ const AmountGraph = () => {
     );
 };
 
-export default AmountGraph;
+export default CashFlowGraph;

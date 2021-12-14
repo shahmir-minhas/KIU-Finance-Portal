@@ -1,19 +1,13 @@
 import React, { Component } from "react";
-import { Button, Menu, Dropdown } from "antd";
-import { DownOutlined } from "@ant-design/icons";
 import { InertiaLink } from '@inertiajs/inertia-react';
 
 import Layout from "../../layout/Index";
 import DataTable from "./../../Components/Common/DataTable";
 import FormInput from "./../../Components/Common/Antd/FormInput";
 import Action from "../../Assets/icons/Icon material-remove-red-eye.svg";
+import StatusDropdown from './../../Components/FinancialPayments/StatusDropdown';
 
 const Index = () => {
-    //status button
-    const [status, setStatus] = React.useState(true);
-    //dropdown
-    const [visible, setvisible] = React.useState(false);
-
     const data = [
         {
             id: 0,
@@ -23,6 +17,24 @@ const Index = () => {
             semester: "6th",
             createdBy: "John Doe",
             status: true,
+        },
+        {
+            id: 1,
+            name: "Muzamil Afirid",
+            feeFor: "Study",
+            paymentMethod: "Bank Transfer",
+            semester: "6th",
+            createdBy: "John Doe",
+            status: true,
+        },
+        {
+            id: 2,
+            name: "Muzamil Afirid",
+            feeFor: "Study",
+            paymentMethod: "Bank Transfer",
+            semester: "6th",
+            createdBy: "John Doe",
+            status: false,
         },
     ];
     const columns = [
@@ -57,23 +69,7 @@ const Index = () => {
         {
             name: "Status",
             selector: (row) => (
-                <Dropdown
-                    overlay={menu}
-                    trigger={["click"]}
-                    visible={visible}
-                    placement="bottomCenter"
-                    arrow
-                >
-                    <Button
-                        className={`f-12 ${
-                            status ? "btn-approve" : "btn-rejected"
-                        } `}
-                        type="button"
-                        onClick={handleApprove}
-                    >
-                        {status ? "Approve" : "Rejected"} <DownOutlined />
-                    </Button>
-                </Dropdown>
+                <StatusDropdown payStatus={row.status} id={row.id}/>
             ),
         },
         {
@@ -86,27 +82,6 @@ const Index = () => {
         },
     ];
 
-    const handleApprove = () => {
-        setStatus(!status);
-        setvisible(!visible);
-    };
-
-    const menu = (
-        <Menu>
-            <Menu.Item key="0">
-                <textarea
-                    className="text-area-dropdown f-10"
-                    value="Plz enter the reason"
-                ></textarea>
-            </Menu.Item>
-            <Menu.Item key="1">
-                <Button className="btn-dropdown-cancel" onClick={handleApprove}>
-                    Cencel
-                </Button>
-                <Button className="btn-dropdown-save">Submit</Button>
-            </Menu.Item>
-        </Menu>
-    );
     return (
         <React.Fragment>
             <Layout currentPage={1}>
@@ -124,8 +99,7 @@ const Index = () => {
                             <div className="primary-table-header border mt-4">
                                 <div className="d-flex align-items-center">
                                     <h2 className="f-14 fw-500 mb-0">
-                                        Showing enrolled students :
-                                        <span className="mx-1">16</span>
+                                        Showing enrolled students
                                     </h2>
                                 </div>
 

@@ -16,26 +16,29 @@
         height: 134px;
         width: 100%;
     }
-    .btn-create-new{
+    .btn-create-new {
         border: none;
         background-color: #f8f8f8;
         color: #089752;
         font-size: 14px;
         box-shadow: none;
-        &:active{
+        &:active {
             border: none;
             background-color: #f8f8f8;
             color: #089752;
             font-size: 14px;
             box-shadow: none;
         }
-        &:focus{
+        &:focus {
             border: none;
             background-color: #f8f8f8;
             color: #089752;
             font-size: 14px;
             box-shadow: none;
         }
+    }
+    .id-color {
+        color: #2f2f75;
     }
 }
 
@@ -56,17 +59,7 @@
         text-decoration: underline;
     }
 }
-//------------------------------ Create new employee Modal  -------------------------
-.new-employee-modal {
-    .ant-modal-content {
-        @include modalContainer;
-    }
-    label {
-        font-size: 14px;
-        color: black;
-        direction: rtl;
-    }
-}
+
 //------------------------------ Employee Details Modal  -------------------------
 .employee-details-modal {
     .ant-modal-content {

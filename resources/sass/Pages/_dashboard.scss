@@ -17,6 +17,10 @@
     .f-color-grey {
         color: #686874;
     }
+    //===========================================================================
+    //---------------------------------- Finance Card ------------------------
+    //===========================================================================
+
     .finance-card {
         padding: 11px 21px;
         height: 154px;
@@ -37,6 +41,10 @@
             color: #686874;
         }
     }
+    //===========================================================================
+    //---------------------------------- College Cashflow Card ----------------
+    //===========================================================================
+
     .colleges-cashflow-card {
         padding: 11px 21px;
         height: 326px;
@@ -55,6 +63,10 @@
             font-size: 10px;
         }
     }
+    //===========================================================================
+    //---------------------------------- Sponsers Card ------------------------
+    //===========================================================================
+
     .sponsors-card {
         // height: 236px;
         hr {
@@ -76,14 +88,26 @@
             }
         }
     }
+    //===========================================================================
+    //---------------------------------- Funds Utilization Card ---------------
+    //===========================================================================
+
     .funds-utilization-card {
         // height: 308px;
         padding: 11px 21px;
     }
+    //===========================================================================
+    //---------------------------------- Cash Flow Card ------------------------
+    //===========================================================================
+
     .cashflow-chart-card {
         padding: 27px 27px 54px 30px;
         height: 504px;
     }
+    //===========================================================================
+    //---------------------------------- Revenue Card ------------------------
+    //===========================================================================
+
     .revenue-bar-chart-wrapper {
         height: 565px;
         .primary-card-rounded {
@@ -92,7 +116,8 @@
             padding: 20px;
         }
     }
-    //PieChart
+
+    // -------------------------- PieChart ----------------------------
     .recharts-default-legend {
         .recharts-legend-item {
             margin: 15px 0;
@@ -102,105 +127,16 @@
             }
         }
     }
+    //===========================================================================
+    //---------------------------------- All Countries Card ----------------
+    //===========================================================================
+
+    .all-countries-bar-chart-wrapper {
+        height: 100%;
+        .primary-card-rounded {
+            padding: 27px 27px 27px 30px;
+            height: 100% !important;
+            padding: 20px;
+        }
+    }
 }
-
-// .dashboard-wrapper {
-//     .statistics-wrapper {
-//         .primary-card-rounded {
-//             padding: 14px 24px;
-//         }
-//     }
-
-//     .vertical-divider {
-//         width: 0px;
-//         height: 59px;
-//         border: 1px solid #ebebeb;
-//     }
-
-//     .amount-graph-wrapper {
-//         .primary-card-rounded {
-//             padding: 14px 24px;
-//             height: 391px !important;
-//             padding: 20px;
-//         }
-//     }
-// }
-
-// .area-chart-header {
-//     display: flex;
-//     .chart-legend {
-//         .indicator {
-//             width: 10px;
-//             height: 10px;
-//             border-radius: 50%;
-//             display: inline-block;
-//             margin-right: 10px;
-//         }
-//         .primary-indicator {
-//             background: #089752;
-//         }
-//         .secondary-indicator {
-//             background: #343379;
-//         }
-//     }
-// }
-
-// .bar-chart-header {
-//     display: flex;
-// }
-
-// .scholarships-wrapper {
-//     .primary-card-rounded {
-//         height: 219px !important;
-//     }
-//     .table-header {
-//         height: 52px;
-//         background-color: #ffffff;
-//         padding: 15px;
-//         border-bottom: 1px solid #e2e2e2;
-//         border-radius: 8px 8px 0px 0px;
-//     }
-//     .table-content {
-//         overflow-y: auto !important;
-//         height: 155px;
-//     }
-
-//     table {
-//         margin: 0 auto;
-//         font-size: 10px;
-//         width: 85%;
-
-//         thead,
-//         tbody tr {
-//             table-layout: fixed; /* even columns width , fix width of table too*/
-//         }
-//         th {
-//             color: #686874;
-//             font-weight: 400;
-//         }
-//         td {
-//             color: #04041c;
-//         }
-//         th,
-//         td {
-//             padding: 0 12px;
-//         }
-//         td,
-//         th {
-//             text-align: center;
-//         }
-//     }
-// }
-
-// .colleges-chart-wrapper {
-//     .primary-card-rounded {
-//         height: 295px !important;
-//         padding: 10px 20px;
-//     }
-// }
-// .gender-chart-wrapper {
-//     .primary-card-rounded {
-//         height: 295px !important;
-//         padding: 10px 20px;
-//     }
-// }

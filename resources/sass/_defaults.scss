@@ -17,8 +17,7 @@ html::-webkit-scrollbar-thumb {
     background-color: #dbdbdb;
 }
 
-antd select language
-.select-option-language {
+antd select language .select-option-language {
     height: 39px !important;
     width: 100px !important;
     color: #04041c !important;
@@ -74,5 +73,19 @@ antd select language
     }
     .lnndaO {
         font-size: 14px;
+    }
+}
+
+//------------------------------ Create new employee Modal  -------------------------
+.create-modals-layout {
+    .ant-modal-content {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #d8d6d6;
+        border-radius: 4px;
+    }
+    label {
+        font-size: 14px;
+        color: black;
+        direction: rtl;
     }
 }

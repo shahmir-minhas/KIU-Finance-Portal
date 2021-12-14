@@ -6,10 +6,11 @@ import {
     XAxis,
     YAxis,
     Cell,
-    Tooltip
+    Tooltip,
 } from "recharts";
 
 const CollegesBarChart = () => {
+    // temporary data array
     const data = [
         {
             name: "English",
@@ -50,7 +51,9 @@ const CollegesBarChart = () => {
                     </div>
                 </div>
             </div>
-
+            {/* 
+                    // Bar Chart 
+            */}
             <div style={{ width: "100%", height: 260 }}>
                 <ResponsiveContainer>
                     <BarChart data={data} barGap={0}>

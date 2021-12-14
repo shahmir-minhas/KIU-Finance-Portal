@@ -1,7 +1,6 @@
 .financial-payments-wrapper {
     .primary-table-header {
         background: #ffffff 0% 0% no-repeat padding-box;
-        // border-radius: 4px;
     }
     .btn-approve {
         width: 84px;
@@ -22,6 +21,9 @@
         border-radius: 4px;
     }
 }
+//===========================================================================
+//---------------------------------- Fianncial Details  ------------------
+//===========================================================================
 .financial-details-wrapper {
     a {
         color: #2f2f75 !important;
@@ -51,12 +53,25 @@
         }
     }
 }
+//===========================================================================
+//---------------------------------- Antd Dropdown ------------------------
+//===========================================================================
 .text-area-dropdown {
     width: 206px;
     height: 78px;
     background: #ffffff 0% 0% no-repeat padding-box;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
+    &:active {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #e0e0e0;
+        box-shadow: none;
+    }
+    &:focus {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #e0e0e0;
+        box-shadow: none;
+    }
 }
 .btn-dropdown-cancel {
     padding: 0;
@@ -68,15 +83,28 @@
     opacity: 1;
     margin: 1px 5px;
     font-size: 10px;
+    &:active,
+    &:focus {
+        border: 1px solid #2f2f75;
+        color: #2f2f75;
+        box-shadow: none;
+    }
 }
-.btn-dropdown-save {
+.btn-dropdown-submit {
     padding: 0;
     width: 46px;
     height: 18px;
     border: 1px solid #089752;
-    color: #089752;
+    background-color: #089752;
+    color: white;
     border-radius: 4px;
     opacity: 1;
     margin: 1px 5px;
     font-size: 10px;
+    &:active,
+    &:focus {
+        border: 1px solid #089752;
+        background-color: #089752;
+        box-shadow: none;
+    }
 }

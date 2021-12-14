@@ -38226,6 +38226,27 @@ html {
   padding-left: 7px !important;
 }
 
+.primary-input, .primary-input:hover {
+  height: 34px !important;
+  background: #ffffff !important;
+  border: 1px solid #d6d6d6 !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+.primary-input input {
+  padding-left: 7px !important;
+}
+
+.primary-upload, .primary-upload:hover {
+  background: #ffffff !important;
+  border: 1px solid #d6d6d6 !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+.primary-upload input {
+  padding-left: 7px !important;
+}
+
 .export-dropdown-menu .ant-dropdown-menu-item,
 .export-dropdown-menu .ant-dropdown-menu-submenu-title {
   padding: 3px 12px !important;
@@ -38237,6 +38258,14 @@ html {
 
 .select-primary .ant-select-selector {
   min-width: 156px !important;
+  height: 34px !important;
+  background: #ffffff !important;
+  border: 1px solid #cbcbcb !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+.select-secondary .ant-select-selector {
   height: 34px !important;
   background: #ffffff !important;
   border: 1px solid #cbcbcb !important;
@@ -38391,6 +38420,17 @@ antd select language .select-option-language .ant-select-arrow {
 }
 .primary-table .lnndaO {
   font-size: 14px;
+}
+
+.create-modals-layout .ant-modal-content {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d8d6d6;
+  border-radius: 4px;
+}
+.create-modals-layout label {
+  font-size: 14px;
+  color: black;
+  direction: rtl;
 }
 
 .button-logout, .button-logout:hover {
@@ -38654,6 +38694,14 @@ main {
   font-size: 12px;
   margin-left: 14px;
 }
+.dashboard-wrapper .all-countries-bar-chart-wrapper {
+  height: 100%;
+}
+.dashboard-wrapper .all-countries-bar-chart-wrapper .primary-card-rounded {
+  padding: 27px 27px 27px 30px;
+  height: 100% !important;
+  padding: 20px;
+}
 
 .financial-payments-wrapper .primary-table-header {
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -38710,6 +38758,16 @@ main {
   border: 1px solid #e0e0e0;
   border-radius: 4px;
 }
+.text-area-dropdown:active {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+}
+.text-area-dropdown:focus {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+}
 
 .btn-dropdown-cancel {
   padding: 0;
@@ -38722,17 +38780,28 @@ main {
   margin: 1px 5px;
   font-size: 10px;
 }
+.btn-dropdown-cancel:active, .btn-dropdown-cancel:focus {
+  border: 1px solid #2f2f75;
+  color: #2f2f75;
+  box-shadow: none;
+}
 
-.btn-dropdown-save {
+.btn-dropdown-submit {
   padding: 0;
   width: 46px;
   height: 18px;
   border: 1px solid #089752;
-  color: #089752;
+  background-color: #089752;
+  color: white;
   border-radius: 4px;
   opacity: 1;
   margin: 1px 5px;
   font-size: 10px;
+}
+.btn-dropdown-submit:active, .btn-dropdown-submit:focus {
+  border: 1px solid #089752;
+  background-color: #089752;
+  box-shadow: none;
 }
 
 .expenses-wrapper .create-category {
@@ -38751,29 +38820,25 @@ main {
   margin-right: 30px;
   font-size: 14px;
 }
-.expenses-wrapper .btn-category {
-  width: 89px;
-  height: 34px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  color: #000000;
-  border: none;
+.expenses-wrapper .btn-add:active, .expenses-wrapper .btn-add:focus {
+  color: #ffffff !important;
+  background: #089752 0% 0% no-repeat padding-box !important;
+  box-shadow: none !important;
 }
-.expenses-wrapper .btn-category a {
-  text-decoration: none;
-  color: #000000 !important;
+.expenses-wrapper a {
+  text-decoration: underline;
   font-size: 14px;
+  color: #2f2f75 !important;
 }
-.expenses-wrapper .btn-category:active {
-  color: #000000;
-  border: 1px solid #b5b5b5;
-}
-.expenses-wrapper .btn-category:focus {
-  color: #000000;
-  border: 1px solid #b5b5b5;
+.expenses-wrapper .btn-edit {
+  border: none;
+  background-color: #ffffff;
+  box-shadow: none;
+  height: 40px;
 }
 
 .expenses-details-wrapper h6, .expenses-details-wrapper .h6 {
-  color: #2F2F75;
+  color: #2f2f75;
 }
 .expenses-details-wrapper a {
   text-decoration: none;
@@ -38843,6 +38908,9 @@ main {
   font-size: 14px;
   box-shadow: none;
 }
+.employees-wrapper .id-color {
+  color: #2f2f75;
+}
 
 .import-modal {
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -38860,17 +38928,6 @@ main {
   font: 14px;
   color: #1a60ec;
   text-decoration: underline;
-}
-
-.new-employee-modal .ant-modal-content {
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border: 1px solid #d8d6d6;
-  border-radius: 4px;
-}
-.new-employee-modal label {
-  font-size: 14px;
-  color: black;
-  direction: rtl;
 }
 
 .employee-details-modal .ant-modal-content {
@@ -38952,8 +39009,34 @@ main {
   color: #ff4e4e;
   border-radius: 4px;
   opacity: 1;
-  width: 84px;
+  width: 90px;
   height: 31px;
+}
+.payment-account-wrapper .btn-create-new {
+  border: none;
+  background-color: #f8f8f8;
+  color: #089752;
+  font-size: 14px;
+  box-shadow: none;
+}
+.payment-account-wrapper .btn-create-new:active {
+  border: none;
+  background-color: #f8f8f8;
+  color: #089752;
+  font-size: 14px;
+  box-shadow: none;
+}
+.payment-account-wrapper .btn-create-new:focus {
+  border: none;
+  background-color: #f8f8f8;
+  color: #089752;
+  font-size: 14px;
+  box-shadow: none;
+}
+
+.payment-modal .status {
+  font-size: 10px;
+  color: #707070;
 }
 
 

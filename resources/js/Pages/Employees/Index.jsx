@@ -93,6 +93,9 @@ const Index = () => {
                 <div className="employees-wrapper">
                     <div className="d-flex justify-content-between align-items-center">
                         <h6 className="fw-bold f-18 m-0">Employees</h6>
+                        {/* 
+                            // Create New Employee modal 
+                        */}
                         <NewEmployeeModal />
                     </div>
                     <div className="border border-top-0">
@@ -107,7 +110,6 @@ const Index = () => {
                                 <div className="d-flex align-items-center">
                                     <h2 className="f-14 fw-500 mb-0 me-3">
                                         Showing all Employees :
-                                        <span className="mx-1">16</span>
                                     </h2>
                                     <ExportDropdown className="me-3" />
                                     <ImportDropdown />
@@ -115,7 +117,7 @@ const Index = () => {
                                 <div>
                                     <div className="d-flex ms-5 align-items-center">
                                         <p className="m-0 me-3 f-14">View:</p>
-                                        <Select defaultValue="All     ">
+                                        <Select defaultValue="All" className="select-secondary">
                                             <Option value="All">All</Option>
                                             <Option value="Faculty">
                                                 Faculty

@@ -4,10 +4,11 @@ import DataTable from "./../../Components/Common/DataTable";
 import FormInput from "./../../Components/Common/Antd/FormInput";
 import EditIcon from "../../Assets/icons/Icon material-edit.svg";
 import DelIcon from "../../Assets/icons/Icon material-remove-circle.svg";
-import { Button } from "antd";
-import NewPaymentModal from './../../Components/AccountPayments/NewPaymentModal';
+import NewPaymentModal from "./../../Components/PaymentAccount/NewPaymentModal";
+import StatusButton from "./../../Components/PaymentAccount/StatusButton";
 
 const Index = () => {
+    const [btnStatus, setBtnStatus] = React.useState(true);
     const data = [
         {
             id: "0225",
@@ -18,7 +19,7 @@ const Index = () => {
             updatedAt: "10-jan-2021",
         },
         {
-            id: "0225",
+            id: "0471",
             accountNo: "0312546987226",
             swiftCode: "03115",
             status: false,
@@ -46,11 +47,7 @@ const Index = () => {
         {
             name: "Status",
             selector: (row) => (
-                <Button
-                    className={`${row.status ? "btn-active" : "btn-rejected"}`}
-                >
-                    {row.status ? "Active" : "Inactive"}
-                </Button>
+                <StatusButton payStatus={row.status} id={row.id} />
             ),
         },
         {
@@ -73,6 +70,9 @@ const Index = () => {
             ),
         },
     ];
+    const handleBtnStatus = () => {
+        setBtnStatus(!btnStatus);
+    };
     return (
         <React.Fragment>
             <Layout currentPage={5}>
@@ -96,7 +96,7 @@ const Index = () => {
                                 </div>
 
                                 <div className="d-flex ms-5 align-items-center">
-                                    <NewPaymentModal/>
+                                    <NewPaymentModal />
                                     <FormInput
                                         className="mb-0 ms-3"
                                         type="search"

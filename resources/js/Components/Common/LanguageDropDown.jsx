@@ -8,7 +8,7 @@ const LanguageDropdown = () => {
     return (
         <div>
             <Select
-                className="select-option-language"
+                className="select-option-language select-secondary"
                 defaultValue="English"
                 suffixIcon={<img className="" src={DropDownIcon} />}
             >

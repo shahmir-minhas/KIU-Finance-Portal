@@ -9334,6 +9334,52 @@ DataTable.propTypes = {
 
 /***/ }),
 
+/***/ "./resources/js/Hooks/useNavBarScrollAnimate.jsx":
+/*!*******************************************************!*\
+  !*** ./resources/js/Hooks/useNavBarScrollAnimate.jsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+var useNavBarScrollAnimate = function useNavBarScrollAnimate() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      showBG = _useState2[0],
+      setBG = _useState2[1];
+
+  var handleNavBarScroll = function handleNavBarScroll() {
+    setBG(window.scrollY);
+  };
+
+  window.addEventListener("scroll", handleNavBarScroll);
+  return {
+    showBG: showBG
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useNavBarScrollAnimate);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Expenses/Details.jsx":
 /*!*************************************************!*\
   !*** ./resources/js/Pages/Expenses/Details.jsx ***!
@@ -9363,6 +9409,14 @@ __webpack_require__.r(__webpack_exports__);
 var Details = function Details() {
   var data = [{
     id: 0,
+    paymentMethod: "Bank Transfer",
+    date: "10-jan-2021"
+  }, {
+    id: 1,
+    paymentMethod: "Bank Transfer",
+    date: "10-jan-2021"
+  }, {
+    id: 2,
     paymentMethod: "Bank Transfer",
     date: "10-jan-2021"
   }];
@@ -9454,7 +9508,7 @@ var Option = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Option;
 
 var LanguageDropdown = function LanguageDropdown() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    className: "select-option-language",
+    className: "select-option-language select-secondary",
     defaultValue: "English",
     suffixIcon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       className: "",
@@ -9496,6 +9550,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_icons_email_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/icons/email.png */ "./resources/js/assets/icons/email.png");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _Hooks_useNavBarScrollAnimate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../Hooks/useNavBarScrollAnimate */ "./resources/js/Hooks/useNavBarScrollAnimate.jsx");
 
 
 
@@ -9505,14 +9560,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import useNavBarScrollAnimate from "./../Hooks/useNavBarScrollAnimate";
+
+
 
 function Index(_ref) {
   var children = _ref.children,
       title = _ref.title,
       currentPage = _ref.currentPage;
+
   // custom hook for navbar scroll animation
-  // const { showBG } = useNavBarScrollAnimate();
+  var _useNavBarScrollAnima = (0,_Hooks_useNavBarScrollAnimate__WEBPACK_IMPORTED_MODULE_10__["default"])(),
+      showBG = _useNavBarScrollAnima.showBG;
+
   var staticSidebarTabsData = [{
     name: "Dashboard",
     image: _assets_icons_home_png__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -9522,27 +9581,27 @@ function Index(_ref) {
     name: "Financial Payments",
     image: _assets_icons_student_graduation_png__WEBPACK_IMPORTED_MODULE_5__["default"],
     url: "/financial-payments",
-    key: 0
+    key: 1
   }, {
     name: "Expenses",
     image: _assets_icons_graduation_cap_png__WEBPACK_IMPORTED_MODULE_4__["default"],
     url: "/expenses",
-    key: 1
+    key: 2
   }, {
     name: "Student Wallets",
     image: _assets_icons_spell_check_png__WEBPACK_IMPORTED_MODULE_6__["default"],
     url: "/student-wallets",
-    key: 2
+    key: 3
   }, {
     name: "Employees",
     image: _assets_icons_email_png__WEBPACK_IMPORTED_MODULE_7__["default"],
     url: "/employees",
-    key: 3
+    key: 4
   }, {
     name: "Payment Account",
     image: _assets_icons_email_png__WEBPACK_IMPORTED_MODULE_7__["default"],
     url: "/payment-account",
-    key: 4
+    key: 5
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "primary-sidebar"
@@ -9565,11 +9624,7 @@ function Index(_ref) {
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex-1"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "top-navigation" // {clsx(
-    //     "top-navigation ",
-    //     showBG > 0 && "scroll-active"
-    // )}
-
+    className: (0,clsx__WEBPACK_IMPORTED_MODULE_9__["default"])("top-navigation ", showBG > 0 && "scroll-active")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TopNavigation__WEBPACK_IMPORTED_MODULE_2__["default"], {
     currentPage: currentPage,
     title: title,

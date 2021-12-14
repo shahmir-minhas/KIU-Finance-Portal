@@ -14,6 +14,16 @@ const Details = () => {
             paymentMethod: "Bank Transfer",
             date: "10-jan-2021",
         },
+        {
+            id: 1,
+            paymentMethod: "Bank Transfer",
+            date: "10-jan-2021",
+        },
+        {
+            id: 2,
+            paymentMethod: "Bank Transfer",
+            date: "10-jan-2021",
+        },
     ];
     const columns = [
         {
@@ -66,9 +76,7 @@ const Details = () => {
                                     Showing all Inventory Expenses:
                                     <span className="mx-1">16</span>
                                 </h2>
-                                {/* <div className="d-flex align-items-center"> */}
                                 <FormInput className="mb-0" type="search" />
-                                {/* </div> */}
                             </div>
                         </DataTable>
                     </div>

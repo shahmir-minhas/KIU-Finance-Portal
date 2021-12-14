@@ -15,7 +15,35 @@
         color: #ff4e4e;
         border-radius: 4px;
         opacity: 1;
-        width: 84px;
+        width: 90px;
         height: 31px;
+    }
+    .btn-create-new {
+        border: none;
+        background-color: #f8f8f8;
+        color: #089752;
+        font-size: 14px;
+        box-shadow: none;
+        &:active {
+            border: none;
+            background-color: #f8f8f8;
+            color: #089752;
+            font-size: 14px;
+            box-shadow: none;
+        }
+        &:focus {
+            border: none;
+            background-color: #f8f8f8;
+            color: #089752;
+            font-size: 14px;
+            box-shadow: none;
+        }
+    }
+}
+// New Payment Modal
+.payment-modal {
+    .status{
+        font-size: 10px;
+        color: #707070;
     }
 }

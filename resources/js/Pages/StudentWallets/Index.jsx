@@ -92,9 +92,7 @@ const Index = () => {
                             <div className="primary-table-header border mt-4">
                                 <h2 className="f-14 fw-500 mb-0">
                                     Showing all student wallets :
-                                    <span className="mx-1">16</span>
                                 </h2>
-
                                 <FormInput className="mb-0" type="search" />
                             </div>
                         </DataTable>

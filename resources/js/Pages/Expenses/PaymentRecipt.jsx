@@ -6,13 +6,14 @@ import { InertiaLink } from "@inertiajs/inertia-react";
 
 
 const PaymentRecipt = () => {
+    const id = window.history.state.url.split('/').pop();
     return (
         <Layout currentPage={2}>
             <div className="payment-recipt-wrapper">
                 <h6 className="fw-bold f-18 m-0">Details</h6>
                 <div className="mt-4 primary-card-rounded">
                     <div>
-                        <InertiaLink href={`/expense`}>
+                        <InertiaLink href={`/expenses/${id}`}>
                             <span>
                                 <img src={BackIcon} alt="" className="me-1" />
                             </span>

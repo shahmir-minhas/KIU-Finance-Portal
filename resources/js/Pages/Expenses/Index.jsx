@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
-import { Button } from "antd";
 
 import Layout from "../../layout/Index";
 import DataTable from "./../../Components/Common/DataTable";
 import FormInput from "./../../Components/Common/Antd/FormInput";
+import AddExpenseModal from "./../../Components/Expenses/AddExpenseModal";
+import ActionEdit from "../../Components/Expenses/ActionEdit";
+
 import AddIcon from "../../Assets/icons/Icon material-add-circle.svg";
-import EditIcon from "../../Assets/icons/Icon material-edit.svg";
-import Approve from "../../Assets/icons/Group 229.svg";
 
 const Index = () => {
     const data = [
@@ -35,13 +35,9 @@ const Index = () => {
         {
             name: "Category",
             selector: (row) => (
-                <Button className="btn-category">
-                    <InertiaLink
-                        href={`expenses/${row.id}`}
-                    >
-                        {row.category}
-                    </InertiaLink>
-                </Button>
+                <InertiaLink href={`expenses/${row.id}`}>
+                    {row.category}
+                </InertiaLink>
             ),
         },
         {
@@ -50,11 +46,7 @@ const Index = () => {
         },
         {
             name: "Action",
-            selector: (row) => (
-                <div>
-                    <img src={EditIcon} alt="" />
-                </div>
-            ),
+            selector: (row) => <ActionEdit />,
         },
     ];
 
@@ -75,8 +67,7 @@ const Index = () => {
                         >
                             <div className="primary-table-header border mt-4">
                                 <h2 className="f-14 fw-500 mb-0">
-                                    Showing all Expenses Category :
-                                    <span className="mx-1">16</span>
+                                    Showing all Expenses Category
                                 </h2>
                                 <div className="d-flex align-items-center">
                                     <InertiaLink
@@ -88,11 +79,10 @@ const Index = () => {
                                         </span>
                                         Create new Category
                                     </InertiaLink>
-
-                                    <Button className="btn-add">
-                                        Add Expense
-                                    </Button>
-
+                                    {/* 
+                                        //   Add Expense modal 
+                                    */}
+                                    <AddExpenseModal />
                                     <FormInput className="mb-0" type="search" />
                                 </div>
                             </div>

@@ -8,11 +8,11 @@ import AcademicIcon from "../assets/icons/spell-check.png";
 import EmailIcon from "../assets/icons/email.png";
 import { InertiaLink } from "@inertiajs/inertia-react";
 import clsx from "clsx";
-// import useNavBarScrollAnimate from "./../Hooks/useNavBarScrollAnimate";
+import useNavBarScrollAnimate from "./../Hooks/useNavBarScrollAnimate";
 
 function Index({ children, title, currentPage }) {
     // custom hook for navbar scroll animation
-    // const { showBG } = useNavBarScrollAnimate();
+    const { showBG } = useNavBarScrollAnimate();
 
     const staticSidebarTabsData = [
         { name: "Dashboard", image: HomeIcon, url: "/dashboard", key: 0 },
@@ -20,26 +20,26 @@ function Index({ children, title, currentPage }) {
             name: "Financial Payments",
             image: GraduationIcon,
             url: "/financial-payments",
-            key: 0,
+            key: 1,
         },
         {
             name: "Expenses",
             image: GraduateIcon,
             url: "/expenses",
-            key: 1,
+            key: 2,
         },
         {
             name: "Student Wallets",
             image: AcademicIcon,
             url: "/student-wallets",
-            key: 2,
+            key: 3,
         },
-        { name: "Employees", image: EmailIcon, url: "/employees", key: 3 },
+        { name: "Employees", image: EmailIcon, url: "/employees", key: 4 },
         {
             name: "Payment Account",
             image: EmailIcon,
             url: "/payment-account",
-            key: 4,
+            key: 5,
         },
     ];
 
@@ -64,6 +64,7 @@ function Index({ children, title, currentPage }) {
                             </span>
                             <InertiaLink preserveState={true} href={item.url}>
                                 {item.name}
+
                             </InertiaLink>
                         </li>
                     ))}
@@ -75,11 +76,10 @@ function Index({ children, title, currentPage }) {
                     //Top header of every component
                 }
                 <div
-                    className="top-navigation"
-                    // {clsx(
-                    //     "top-navigation ",
-                    //     showBG > 0 && "scroll-active"
-                    // )}
+                    className={clsx(
+                        "top-navigation ",
+                        showBG > 0 && "scroll-active"
+                    )}
                 >
                     <TopNavigation
                         currentPage={currentPage}

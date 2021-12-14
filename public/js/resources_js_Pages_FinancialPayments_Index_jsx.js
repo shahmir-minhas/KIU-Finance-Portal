@@ -10776,10 +10776,10 @@ DataTable.propTypes = {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/FinancialPayments/Index.jsx":
-/*!********************************************************!*\
-  !*** ./resources/js/Pages/FinancialPayments/Index.jsx ***!
-  \********************************************************/
+/***/ "./resources/js/Components/FinancialPayments/StatusDropdown.jsx":
+/*!**********************************************************************!*\
+  !*** ./resources/js/Components/FinancialPayments/StatusDropdown.jsx ***!
+  \**********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -10788,15 +10788,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/dropdown/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/menu/index.js");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/DownOutlined.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _layout_Index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../layout/Index */ "./resources/js/layout/Index.jsx");
-/* harmony import */ var _Components_Common_DataTable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Components/Common/DataTable */ "./resources/js/Components/Common/DataTable.jsx");
-/* harmony import */ var _Components_Common_Antd_FormInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../Components/Common/Antd/FormInput */ "./resources/js/Components/Common/Antd/FormInput.jsx");
-/* harmony import */ var _Assets_icons_Icon_material_remove_red_eye_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Assets/icons/Icon material-remove-red-eye.svg */ "./resources/js/Assets/icons/Icon material-remove-red-eye.svg");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/menu/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/form/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/dropdown/index.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/DownOutlined.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -10813,24 +10810,156 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+var StatusDropdown = function StatusDropdown(_ref) {
+  var payStatus = _ref.payStatus,
+      id = _ref.id;
+
+  //  status button ie: Approved/Rejected
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__.useState(payStatus),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      status = _React$useState2[0],
+      setStatus = _React$useState2[1]; //  dropdown
+
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      visible = _React$useState4[0],
+      setvisible = _React$useState4[1]; //   handling status approve/reject
+
+
+  var handleApprove = function handleApprove() {
+    setStatus(!status);
+    setvisible(!visible);
+  }; // handling form
+
+
+  var onFinish = function onFinish() {
+    console.log("Success:");
+  };
+
+  var onFinishFailed = function onFinishFailed() {
+    console.log("Failed:");
+  }; //  Dropdown menu
+
+
+  var menu = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
+    key: "0"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onFinish: onFinish,
+    onFinishFailed: onFinishFailed,
+    autoComplete: "off"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["default"].Item, {
+    className: "mb-0",
+    name: "reason",
+    rules: [{
+      required: true,
+      message: "Please input your reason!"
+    }]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["default"].TextArea, {
+    className: "text-area-dropdown f-10 mb-0",
+    rows: 6,
+    placeholder: "Plz enter the reason"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
+    key: "1"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "text-end"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "btn-dropdown-cancel",
+    onClick: handleApprove
+  }, "Cencel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "btn-dropdown-submit",
+    htmlType: "submit"
+  }, "Submit"))));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    overlay: menu,
+    trigger: ["click"],
+    visible: visible,
+    placement: "bottomCenter",
+    arrow: true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "f-12 ".concat(status ? "btn-approve" : "btn-rejected", " "),
+    type: "button",
+    onClick: handleApprove
+  }, status ? "Approve" : "Rejected", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StatusDropdown);
+
+/***/ }),
+
+/***/ "./resources/js/Hooks/useNavBarScrollAnimate.jsx":
+/*!*******************************************************!*\
+  !*** ./resources/js/Hooks/useNavBarScrollAnimate.jsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+var useNavBarScrollAnimate = function useNavBarScrollAnimate() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      showBG = _useState2[0],
+      setBG = _useState2[1];
+
+  var handleNavBarScroll = function handleNavBarScroll() {
+    setBG(window.scrollY);
+  };
+
+  window.addEventListener("scroll", handleNavBarScroll);
+  return {
+    showBG: showBG
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useNavBarScrollAnimate);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/FinancialPayments/Index.jsx":
+/*!********************************************************!*\
+  !*** ./resources/js/Pages/FinancialPayments/Index.jsx ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _layout_Index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../layout/Index */ "./resources/js/layout/Index.jsx");
+/* harmony import */ var _Components_Common_DataTable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Components/Common/DataTable */ "./resources/js/Components/Common/DataTable.jsx");
+/* harmony import */ var _Components_Common_Antd_FormInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../Components/Common/Antd/FormInput */ "./resources/js/Components/Common/Antd/FormInput.jsx");
+/* harmony import */ var _Assets_icons_Icon_material_remove_red_eye_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Assets/icons/Icon material-remove-red-eye.svg */ "./resources/js/Assets/icons/Icon material-remove-red-eye.svg");
+/* harmony import */ var _Components_FinancialPayments_StatusDropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../Components/FinancialPayments/StatusDropdown */ "./resources/js/Components/FinancialPayments/StatusDropdown.jsx");
+
+
+
 
 
 
 
 
 var Index = function Index() {
-  //status button
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__.useState(true),
-      _React$useState2 = _slicedToArray(_React$useState, 2),
-      status = _React$useState2[0],
-      setStatus = _React$useState2[1]; //dropdown
-
-
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
-      _React$useState4 = _slicedToArray(_React$useState3, 2),
-      visible = _React$useState4[0],
-      setvisible = _React$useState4[1];
-
   var data = [{
     id: 0,
     name: "Muzamil Afirid",
@@ -10839,6 +10968,22 @@ var Index = function Index() {
     semester: "6th",
     createdBy: "John Doe",
     status: true
+  }, {
+    id: 1,
+    name: "Muzamil Afirid",
+    feeFor: "Study",
+    paymentMethod: "Bank Transfer",
+    semester: "6th",
+    createdBy: "John Doe",
+    status: true
+  }, {
+    id: 2,
+    name: "Muzamil Afirid",
+    feeFor: "Study",
+    paymentMethod: "Bank Transfer",
+    semester: "6th",
+    createdBy: "John Doe",
+    status: false
   }];
   var columns = [{
     name: "S.no",
@@ -10878,17 +11023,10 @@ var Index = function Index() {
   }, {
     name: "Status",
     selector: function selector(row) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        overlay: menu,
-        trigger: ["click"],
-        visible: visible,
-        placement: "bottomCenter",
-        arrow: true
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        className: "f-12 ".concat(status ? "btn-approve" : "btn-rejected", " "),
-        type: "button",
-        onClick: handleApprove
-      }, status ? "Approve" : "Rejected", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ant_design_icons__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_FinancialPayments_StatusDropdown__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        payStatus: row.status,
+        id: row.id
+      });
     }
   }, {
     name: "Action",
@@ -10900,25 +11038,6 @@ var Index = function Index() {
       }));
     }
   }];
-
-  var handleApprove = function handleApprove() {
-    setStatus(!status);
-    setvisible(!visible);
-  };
-
-  var menu = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_9__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_9__["default"].Item, {
-    key: "0"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
-    className: "text-area-dropdown f-10",
-    value: "Plz enter the reason"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_9__["default"].Item, {
-    key: "1"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    className: "btn-dropdown-cancel",
-    onClick: handleApprove
-  }, "Cencel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    className: "btn-dropdown-save"
-  }, "Submit")));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_layout_Index__WEBPACK_IMPORTED_MODULE_2__["default"], {
     currentPage: 1
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -10939,9 +11058,7 @@ var Index = function Index() {
     className: "d-flex align-items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     className: "f-14 fw-500 mb-0"
-  }, "Showing enrolled students :", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "mx-1"
-  }, "16"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Showing enrolled students")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-flex align-items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Common_Antd_FormInput__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "mb-0",
@@ -10974,7 +11091,7 @@ var Option = antd__WEBPACK_IMPORTED_MODULE_2__["default"].Option;
 
 var LanguageDropdown = function LanguageDropdown() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    className: "select-option-language",
+    className: "select-option-language select-secondary",
     defaultValue: "English",
     suffixIcon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       className: "",
@@ -11016,6 +11133,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_icons_email_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/icons/email.png */ "./resources/js/assets/icons/email.png");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _Hooks_useNavBarScrollAnimate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../Hooks/useNavBarScrollAnimate */ "./resources/js/Hooks/useNavBarScrollAnimate.jsx");
 
 
 
@@ -11025,14 +11143,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import useNavBarScrollAnimate from "./../Hooks/useNavBarScrollAnimate";
+
+
 
 function Index(_ref) {
   var children = _ref.children,
       title = _ref.title,
       currentPage = _ref.currentPage;
+
   // custom hook for navbar scroll animation
-  // const { showBG } = useNavBarScrollAnimate();
+  var _useNavBarScrollAnima = (0,_Hooks_useNavBarScrollAnimate__WEBPACK_IMPORTED_MODULE_10__["default"])(),
+      showBG = _useNavBarScrollAnima.showBG;
+
   var staticSidebarTabsData = [{
     name: "Dashboard",
     image: _assets_icons_home_png__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -11042,27 +11164,27 @@ function Index(_ref) {
     name: "Financial Payments",
     image: _assets_icons_student_graduation_png__WEBPACK_IMPORTED_MODULE_5__["default"],
     url: "/financial-payments",
-    key: 0
+    key: 1
   }, {
     name: "Expenses",
     image: _assets_icons_graduation_cap_png__WEBPACK_IMPORTED_MODULE_4__["default"],
     url: "/expenses",
-    key: 1
+    key: 2
   }, {
     name: "Student Wallets",
     image: _assets_icons_spell_check_png__WEBPACK_IMPORTED_MODULE_6__["default"],
     url: "/student-wallets",
-    key: 2
+    key: 3
   }, {
     name: "Employees",
     image: _assets_icons_email_png__WEBPACK_IMPORTED_MODULE_7__["default"],
     url: "/employees",
-    key: 3
+    key: 4
   }, {
     name: "Payment Account",
     image: _assets_icons_email_png__WEBPACK_IMPORTED_MODULE_7__["default"],
     url: "/payment-account",
-    key: 4
+    key: 5
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "primary-sidebar"
@@ -11085,11 +11207,7 @@ function Index(_ref) {
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex-1"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "top-navigation" // {clsx(
-    //     "top-navigation ",
-    //     showBG > 0 && "scroll-active"
-    // )}
-
+    className: (0,clsx__WEBPACK_IMPORTED_MODULE_9__["default"])("top-navigation ", showBG > 0 && "scroll-active")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TopNavigation__WEBPACK_IMPORTED_MODULE_2__["default"], {
     currentPage: currentPage,
     title: title,

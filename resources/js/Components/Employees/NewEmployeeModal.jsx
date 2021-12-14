@@ -35,7 +35,7 @@ const NewEmployeeModal = () => {
                 onCancel={handleCancel}
                 footer={null}
                 width={776}
-                className="new-employee-modal"
+                className="create-modals-layout"
             >
                 <h4 className="fw-bold f-18 mb-3">Create New Employee</h4>
                 <Form
@@ -56,7 +56,7 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Input />
+                                <Input className="primary-input" />
                             </Form.Item>
                             <Form.Item
                                 label="Salary"
@@ -68,7 +68,7 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Input />
+                                <Input className="primary-input" />
                             </Form.Item>
                             <Form.Item
                                 label="Bank Country"
@@ -81,7 +81,10 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Select defaultValue="Select">
+                                <Select
+                                    defaultValue="Select"
+                                    className="select-primary"
+                                >
                                     <Select.Option value="Saudia">
                                         Saudia
                                     </Select.Option>
@@ -104,7 +107,7 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Input />
+                                <Input className="primary-input" />
                             </Form.Item>
                             <Form.Item
                                 label="Account Name"
@@ -117,7 +120,7 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Input />
+                                <Input className="primary-input" />
                             </Form.Item>
                         </div>
                         <div className="col-6">
@@ -132,7 +135,7 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Input />
+                                <Input className="primary-input" />
                             </Form.Item>
                             <Form.Item
                                 label="Bank Name"
@@ -144,7 +147,7 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Input />
+                                <Input className="primary-input" />
                             </Form.Item>
                             <Form.Item
                                 label="Branch"
@@ -156,7 +159,7 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Input />
+                                <Input className="primary-input" />
                             </Form.Item>
                             <Form.Item
                                 label="IBAN Number"
@@ -169,7 +172,7 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Input />
+                                <Input className="primary-input" />
                             </Form.Item>
                             <Form.Item
                                 label="Bank Swift Code"
@@ -182,11 +185,12 @@ const NewEmployeeModal = () => {
                                     },
                                 ]}
                             >
-                                <Input />
+                                <Input className="primary-input" />
                             </Form.Item>
                         </div>
                     </div>
                 </Form>
+                
                 <div className="mt-3 text-end">
                     <Button
                         onClick={handleCancel}

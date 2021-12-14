@@ -12,8 +12,8 @@ import {
     ResponsiveContainer,
 } from "recharts";
 
-const RevenueBarChart = () => {
-    // Temporary data array
+const AllCountriesBarChart = () => {
+    // Temporary Data Array
     const data = [
         {
             name: "UK",
@@ -51,23 +51,85 @@ const RevenueBarChart = () => {
             name: "Malaysia",
             uv: 100,
         },
+        {
+            name: "Malaysia",
+            uv: 100,
+        },
+        {
+            name: "Malaysia",
+            uv: 100,
+        },
+        {
+            name: "Malaysia",
+            uv: 100,
+        },
+        {
+            name: "Malaysia",
+            uv: 100,
+        },
+        {
+            name: "UK",
+            uv: 503,
+        },
+        {
+            name: "UK",
+            uv: 763,
+        },
+        {
+            name: "USA",
+            uv: 1000,
+        },
+        {
+            name: "Pakistan",
+            uv: 483,
+        },
+        {
+            name: "UK",
+            uv: 872,
+        },
+        {
+            name: "Malaysia",
+            uv: 129,
+        },
+        {
+            name: "USA",
+            uv: 430,
+        },
+        {
+            name: "UK",
+            uv: 876,
+        },
+        {
+            name: "Malaysia",
+            uv: 100,
+        },
+        {
+            name: "Malaysia",
+            uv: 100,
+        },
+        {
+            name: "Malaysia",
+            uv: 100,
+        },
+        {
+            name: "Malaysia",
+            uv: 100,
+        },
+        {
+            name: "Malaysia",
+            uv: 100,
+        },
     ];
 
     return (
-        <div className="revenue-bar-chart-wrapper mt-4">
+        <div className="all-countries-bar-chart-wrapper mt-4">
             <div className="primary-card-rounded">
                 <div className="d-flex justify-content-between">
                     <h2 className="f-16 fw-500 mb-18">
-                        Revenue From Top 10 Countries
+                        Revenue From All Countries
                     </h2>
-
-                    <u className="color-secondary f-12 cursor-pointer">
-                        <InertiaLink href={"/dashboard/all-countries"}>
-                            View all
-                        </InertiaLink>
-                    </u>
                 </div>
-                <div style={{ width: "100%", height: 450 }}>
+                <div style={{ width: "100%", height: 1040 }}>
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart
                             data={data}
@@ -91,4 +153,4 @@ const RevenueBarChart = () => {
     );
 };
 
-export default RevenueBarChart;
+export default AllCountriesBarChart;

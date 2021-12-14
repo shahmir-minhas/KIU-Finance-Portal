@@ -25,6 +25,9 @@ Route:: get("/", function () {
 Route:: get("/dashboard", function () {
     return Inertia::render('Dashboard/Index');
 });
+Route:: get("/dashboard/all-countries", function () {
+    return Inertia::render('Dashboard/AllCountries');
+});
 Route:: get("/financial-payments", function () {
     return Inertia::render('FinancialPayments/Index');
 });
