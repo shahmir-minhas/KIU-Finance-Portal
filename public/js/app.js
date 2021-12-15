@@ -1,8 +1,4 @@
 /******/ (() => { // webpackBootstrap
-<<<<<<< HEAD
-/******/ 	"use strict";
-/******/ 	
-=======
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/@inertiajs/inertia-react/dist/index.js":
@@ -53977,7 +53973,6 @@ module.exports = JSON.parse('{"_from":"axios@^0.21.1","_id":"axios@0.21.4","_inB
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
->>>>>>> master
 /******/ 	
 /******/ })()
 ;

@@ -38758,12 +38758,7 @@ main {
   border: 1px solid #e0e0e0;
   border-radius: 4px;
 }
-.text-area-dropdown:active {
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border: 1px solid #e0e0e0;
-  box-shadow: none;
-}
-.text-area-dropdown:focus {
+.text-area-dropdown:active, .text-area-dropdown:focus, .text-area-dropdown:hover {
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #e0e0e0;
   box-shadow: none;
@@ -38780,7 +38775,7 @@ main {
   margin: 1px 5px;
   font-size: 10px;
 }
-.btn-dropdown-cancel:active, .btn-dropdown-cancel:focus {
+.btn-dropdown-cancel:active, .btn-dropdown-cancel:focus, .btn-dropdown-cancel:hover {
   border: 1px solid #2f2f75;
   color: #2f2f75;
   box-shadow: none;
@@ -38792,16 +38787,17 @@ main {
   height: 18px;
   border: 1px solid #089752;
   background-color: #089752;
-  color: white;
+  color: #ffffff;
   border-radius: 4px;
   opacity: 1;
   margin: 1px 5px;
   font-size: 10px;
 }
-.btn-dropdown-submit:active, .btn-dropdown-submit:focus {
+.btn-dropdown-submit:active, .btn-dropdown-submit:focus, .btn-dropdown-submit:hover {
   border: 1px solid #089752;
   background-color: #089752;
   box-shadow: none;
+  color: #ffffff;
 }
 
 .expenses-wrapper .create-category {
@@ -38820,10 +38816,11 @@ main {
   margin-right: 30px;
   font-size: 14px;
 }
-.expenses-wrapper .btn-add:active, .expenses-wrapper .btn-add:focus {
+.expenses-wrapper .btn-add:active, .expenses-wrapper .btn-add:focus, .expenses-wrapper .btn-add:hover {
   color: #ffffff !important;
   background: #089752 0% 0% no-repeat padding-box !important;
   box-shadow: none !important;
+  border: none;
 }
 .expenses-wrapper a {
   text-decoration: underline;
@@ -38894,14 +38891,7 @@ main {
   font-size: 14px;
   box-shadow: none;
 }
-.employees-wrapper .btn-create-new:active {
-  border: none;
-  background-color: #f8f8f8;
-  color: #089752;
-  font-size: 14px;
-  box-shadow: none;
-}
-.employees-wrapper .btn-create-new:focus {
+.employees-wrapper .btn-create-new:active, .employees-wrapper .btn-create-new:hover, .employees-wrapper .btn-create-new:focus {
   border: none;
   background-color: #f8f8f8;
   color: #089752;
@@ -38958,13 +38948,7 @@ main {
   height: 34px;
   font-size: 14px;
 }
-.btn-modal-cancel:active {
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border: 1px solid #2f2f75;
-  color: #2f2f75;
-  box-shadow: none;
-}
-.btn-modal-cancel:focus {
+.btn-modal-cancel:active, .btn-modal-cancel:focus, .btn-modal-cancel:hover {
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #2f2f75;
   color: #2f2f75;
@@ -38986,7 +38970,7 @@ main {
   background: #089752 0% 0% no-repeat padding-box;
   box-shadow: none;
 }
-.btn-modal-create:focus {
+.btn-modal-create:focus, .btn-modal-create:hover {
   border: 1px solid #089752;
   background: #089752 0% 0% no-repeat padding-box;
   box-shadow: none;
@@ -39019,14 +39003,7 @@ main {
   font-size: 14px;
   box-shadow: none;
 }
-.payment-account-wrapper .btn-create-new:active {
-  border: none;
-  background-color: #f8f8f8;
-  color: #089752;
-  font-size: 14px;
-  box-shadow: none;
-}
-.payment-account-wrapper .btn-create-new:focus {
+.payment-account-wrapper .btn-create-new:active, .payment-account-wrapper .btn-create-new:focus, .payment-account-wrapper .btn-create-new:hover {
   border: none;
   background-color: #f8f8f8;
   color: #089752;
@@ -39038,8 +39015,5 @@ main {
   font-size: 10px;
   color: #707070;
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> master

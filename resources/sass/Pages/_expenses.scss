@@ -15,10 +15,12 @@
         margin-right: 30px;
         font-size: 14px;
         &:active,
-        &:focus {
+        &:focus,
+        &:hover {
             color: #ffffff !important;
             background: #089752 0% 0% no-repeat padding-box !important;
             box-shadow: none !important;
+            border: none;
         }
     }
 

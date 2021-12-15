@@ -24,14 +24,9 @@
         color: #089752;
         font-size: 14px;
         box-shadow: none;
-        &:active {
-            border: none;
-            background-color: #f8f8f8;
-            color: #089752;
-            font-size: 14px;
-            box-shadow: none;
-        }
-        &:focus {
+        &:active,
+        &:focus,
+        &:hover {
             border: none;
             background-color: #f8f8f8;
             color: #089752;
@@ -42,7 +37,7 @@
 }
 // New Payment Modal
 .payment-modal {
-    .status{
+    .status {
         font-size: 10px;
         color: #707070;
     }

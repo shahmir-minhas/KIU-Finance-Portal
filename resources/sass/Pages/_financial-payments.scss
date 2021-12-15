@@ -62,12 +62,9 @@
     background: #ffffff 0% 0% no-repeat padding-box;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-    &:active {
-        background: #ffffff 0% 0% no-repeat padding-box;
-        border: 1px solid #e0e0e0;
-        box-shadow: none;
-    }
-    &:focus {
+    &:active,
+    &:focus,
+    &:hover {
         background: #ffffff 0% 0% no-repeat padding-box;
         border: 1px solid #e0e0e0;
         box-shadow: none;
@@ -84,7 +81,8 @@
     margin: 1px 5px;
     font-size: 10px;
     &:active,
-    &:focus {
+    &:focus,
+    &:hover {
         border: 1px solid #2f2f75;
         color: #2f2f75;
         box-shadow: none;
@@ -96,15 +94,17 @@
     height: 18px;
     border: 1px solid #089752;
     background-color: #089752;
-    color: white;
+    color: #ffffff;
     border-radius: 4px;
     opacity: 1;
     margin: 1px 5px;
     font-size: 10px;
     &:active,
-    &:focus {
+    &:focus,
+    &:hover {
         border: 1px solid #089752;
         background-color: #089752;
         box-shadow: none;
+        color: #ffffff;
     }
 }
