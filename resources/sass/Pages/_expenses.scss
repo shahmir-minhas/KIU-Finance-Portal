@@ -1,0 +1,79 @@
+.expenses-wrapper {
+    .create-category {
+        text-decoration: none;
+        font-size: 14px;
+        color: #089752 !important;
+        margin-right: 30px;
+    }
+    .btn-add {
+        width: 119px;
+        height: 34px;
+        color: #ffffff;
+        background: #089752 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        opacity: 1;
+        margin-right: 30px;
+        font-size: 14px;
+        &:active,
+        &:focus {
+            color: #ffffff !important;
+            background: #089752 0% 0% no-repeat padding-box !important;
+            box-shadow: none !important;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        font-size: 14px;
+        color: #2f2f75 !important;
+    }
+    .btn-edit {
+        border: none;
+        background-color: #ffffff;
+        box-shadow: none;
+        height: 40px;
+    }
+}
+//===========================================================================
+//---------------------------------- Expense Details ---------------------
+//===========================================================================
+.expenses-details-wrapper {
+    h6 {
+        color: #2f2f75;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+//===========================================================================
+//---------------------------------- Payment Reciept ----------------------
+//===========================================================================
+.payment-recipt-wrapper {
+    a {
+        color: #2f2f75 !important;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .primary-card-rounded {
+        padding: 30px 70px 40px 30px;
+    }
+    .img-holder {
+        background-color: grey;
+        width: 188px;
+        height: 158px;
+    }
+    .details-cell {
+        p {
+            color: #b8b8b8;
+            font-size: 12px;
+            margin: 0;
+            margin-bottom: 6px;
+        }
+        h6 {
+            color: #15152e;
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+}

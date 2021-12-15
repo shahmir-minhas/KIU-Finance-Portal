@@ -1,0 +1,31 @@
+// fonts cdn
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+//Antd
+@import "~antd/dist/antd.css";
+
+// style guides  / defaults
+@import "reset";
+@import "typography";
+@import "variables";
+@import "mixins";
+@import "antdDefaults";
+@import "defaults";
+@import "buttons";
+@import "layout";
+@import "utilities";
+
+// // PAGES
+@import "Pages/dashboard";
+@import "Pages/financial-payments";
+@import 'Pages/expenses';
+@import 'Pages/studentWallet';
+@import 'Pages/employees';
+@import 'Pages/paymentAccount';
+
+// // responsivness
+@import "responsive";

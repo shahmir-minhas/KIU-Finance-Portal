@@ -1,0 +1,91 @@
+* {
+    scrollbar-color: #dbdbdb transparent;
+    scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+    background-color: #dbdbdb;
+}
+
+antd select language .select-option-language {
+    height: 39px !important;
+    width: 100px !important;
+    color: #04041c !important;
+
+    .ant-select-selector,
+    .ant-select-selector:hover,
+    .ant-select-selector:active {
+        padding-top: 4px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: 0 !important;
+        border-radius: 4px !important;
+        height: 39px !important;
+        font-size: 14px !important;
+    }
+    .ant-select-selection-item {
+        font-weight: 400 !important;
+    }
+    .ant-select-arrow {
+        right: 20px !important;
+    }
+}
+
+.primary-card {
+    width: 100%;
+    min-height: 606px;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px #cecece29;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+.primary-card-rounded {
+    width: 100%;
+    min-height: 123px;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px #e3e3e3;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+}
+.primary-table-header {
+    padding: 15px 24px 13px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        font-size: 14px !important;
+        font-weight: 500;
+    }
+}
+.primary-table {
+    .hCBnvI {
+        border-top: 1px solid #e0e0e0;
+    }
+    .lnndaO {
+        font-size: 14px;
+    }
+}
+
+//------------------------------ Create new employee Modal  -------------------------
+.create-modals-layout {
+    .ant-modal-content {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #d8d6d6;
+        border-radius: 4px;
+    }
+    label {
+        font-size: 14px;
+        color: black;
+        direction: rtl;
+    }
+}

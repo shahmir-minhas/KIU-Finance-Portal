@@ -1,0 +1,110 @@
+.financial-payments-wrapper {
+    .primary-table-header {
+        background: #ffffff 0% 0% no-repeat padding-box;
+    }
+    .btn-approve {
+        width: 84px;
+        height: 31px;
+        padding: 0;
+        color: #089752;
+        border: 1px solid #089752;
+        background-color: #ffffff;
+        border-radius: 4px;
+    }
+    .btn-rejected {
+        width: 84px;
+        height: 31px;
+        padding: 0;
+        color: #cc0000;
+        border: 1px solid #cc0000;
+        background-color: #ffffff;
+        border-radius: 4px;
+    }
+}
+//===========================================================================
+//---------------------------------- Fianncial Details  ------------------
+//===========================================================================
+.financial-details-wrapper {
+    a {
+        color: #2f2f75 !important;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .primary-card-rounded {
+        padding: 30px 70px 40px 30px;
+    }
+    .img-holder {
+        background-color: grey;
+        width: 188px;
+        height: 158px;
+    }
+    .details-cell {
+        p {
+            color: #b8b8b8;
+            font-size: 12px;
+            margin: 0;
+            margin-bottom: 6px;
+        }
+        h6 {
+            color: #15152e;
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+}
+//===========================================================================
+//---------------------------------- Antd Dropdown ------------------------
+//===========================================================================
+.text-area-dropdown {
+    width: 206px;
+    height: 78px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    &:active {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #e0e0e0;
+        box-shadow: none;
+    }
+    &:focus {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #e0e0e0;
+        box-shadow: none;
+    }
+}
+.btn-dropdown-cancel {
+    padding: 0;
+    width: 46px;
+    height: 18px;
+    border: 1px solid #2f2f75;
+    color: #2f2f75;
+    border-radius: 4px;
+    opacity: 1;
+    margin: 1px 5px;
+    font-size: 10px;
+    &:active,
+    &:focus {
+        border: 1px solid #2f2f75;
+        color: #2f2f75;
+        box-shadow: none;
+    }
+}
+.btn-dropdown-submit {
+    padding: 0;
+    width: 46px;
+    height: 18px;
+    border: 1px solid #089752;
+    background-color: #089752;
+    color: white;
+    border-radius: 4px;
+    opacity: 1;
+    margin: 1px 5px;
+    font-size: 10px;
+    &:active,
+    &:focus {
+        border: 1px solid #089752;
+        background-color: #089752;
+        box-shadow: none;
+    }
+}

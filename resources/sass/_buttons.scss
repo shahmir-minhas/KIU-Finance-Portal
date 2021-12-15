@@ -1,0 +1,79 @@
+.button-logout {
+    &,
+    &:hover {
+        min-width: 94px !important;
+        height: 34px !important;
+        background: #eeeefb !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        color: #595991 !important;
+        border: 0 !important;
+    }
+}
+
+.button-primary {
+    &,
+    &:hover {
+        color: #fff !important;
+        border-radius: 4px !important;
+        border-color: #079751f7 !important;
+        background: #079751f7 !important;
+        box-shadow: none !important;
+    }
+}
+
+.button-gradient {
+    &,
+    &:hover {
+        background: transparent
+            linear-gradient(270deg, #079751f7 0%, #343379 100%) !important;
+    }
+}
+
+.button-default {
+    &,
+    &:hover {
+        color: #04041c !important;
+        border-radius: 4px !important;
+        border-color: #d4d4d4 !important;
+        box-shadow: none !important;
+    }
+
+    img {
+        margin-bottom: 1px;
+    }
+}
+
+.button-default-bordered {
+    &,
+    &:hover {
+        color: #2f2f75 !important;
+        border-radius: 4px !important;
+        border-color: #2f2f75 !important;
+        box-shadow: none !important;
+        font-size: 11px !important;
+    }
+
+    img {
+        margin-bottom: 1px;
+        margin-right: 10px;
+    }
+}
+
+.button-filter {
+    &,
+    &:hover {
+        min-width: 88px !important;
+        height: 34px !important;
+        background: #f2f2f2 !important;
+        border-radius: 4px 4px 0px 0px !important;
+        border: 0 !important;
+    }
+}
+
+.button-back {
+    img {
+        margin-right: 14px;
+        margin-bottom: 3px;
+    }
+}
